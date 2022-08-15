@@ -5,17 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
     <title>Driven Eats</title>
   </head>
   <body>
-    <div class="barra-topo"></div>
-    <div class="titulo-prato"></div>
-    <div class="caixa-prato"></div>
-    <div class="titulo-bebida"></div>
-    <div class="caixa-bebida"></div>
-    <div class="titulo-sobremesa"></div>
-    <div class="caixa-sobremesa"></div>
-    <div class="barra-inferior"></div>
-    
+    <div class="barra-topo">
+      <div class="topo-maior">DrivenEats</div>
+      <div class="topo-menor">Sua comida em 6 minutos</div>
+    </div>
+    <div class="titulo-prato">Primeiro, seu prato</div>
+    <div class="caixa-opcoes caixa-prato">
+      
+      <div onclick = "selecionarPrato(this)" class="produto " >
+        <div><img src="chili.png"></div>
+        <div class="nome-produto">Chili</div>
+        <div class="descricao-produto">Especialidade da Chef Meany</div>
+        <div class="price-box">
+        <div class="preco-produto">R$ 4,90</div>
+        <ion-icon name="checkmark-circle" class="checkmark "></ion-icon>
+      </div>
+      </div>
+      <div onclick = "selecionarPrato(this)" class="produto " >
+        <div><img src="sopa.png"></div>
+        <div class="nome-produto">Sopa de ouro</div>
+        <div class="descricao-produto">Sem duvida o melhor para se servir</div>
+        <div class="price-box">
+        <div class="preco-produto">R$ 4,50</div>
+        <ion-icon name="checkmark-circle" class="checkmark "></ion-icon>
+      </div>
+      </div>
+      <div  onclick = "selecionarPrato(this)" class="produto " >
+        <div><img src="frango.png"></div>
+        <div class="nome-produto">Frango Assado</div>
+        <div class="descricao-produto">Da vontade de dançar</div>
+        <div class="price-box">
+        <div class="preco-produto">R$ 25,00</div>
+        <ion-icon name="checkmark-circle" class="checkmark "></ion-icon>
+      </div>
+      </div>
+
+    </div>
+    <div class="titulo-bebida titulo">Agora, sua bebida</div>
+
+    <div class="caixa-opcoes caixa-bebida">
+
+      <div onclick = "selecionarBebida(this)" class="produto ">
+        <div><img src="olho-vermelho2.png"></div>
+        <div class="nome-produto">Olho Vermelho</div>
+        <div class="descricao-produto">O preferido do fora-da-lei</div>
+        <div class="price-box">
+        <div class="preco-produto">R$ 89,90</div>
+        <ion-icon name="checkmark-circle" class="checkmark "></ion-icon>
+      </div>
+      </div>
+      <div  onclick = "selecionarBebida(this)" class="produto ">
+        <div><img src="olho-rosa4.png"></div>
+        <div class="nome-produto">Olho Rosa</div>
+        <div class="descricao-produto">O preferido do Xerife</div>
+        <div class="price-box">
+        <div class="preco-produto">R$ 89,89</div>
+        <ion-icon name="checkmark-circle" class="checkmark "></ion-icon>
+      </div>
+      </div>
+      <div  onclick = "selecionarBebida(this)" class="produto ">
+        <div><img src="formula.png"></div>
+        <div class="nome-produto">Formula 7 3/8</div>
+        <div class="descricao-produto">Uma gota 50 mil cavalos</div>
+        <div class="price-box">
+        <div class="preco-produto">R$ 99,99</div>
+        <ion-icon name="checkmark-circle" class="checkmark "></ion-icon>
+      </div>
+      </div>
+    </div>  
+    <div class="titulo-sobremesa titulo">Por fim, sua sobremesa</div>
+   
+    <div class="caixa-opcoes  caixa-sobremesa">
+
+      <div onclick = "selecionarSobremesa(this)" class="produto ">
+ 
+        <div><img src="bolo.png"></div>
+        <div class="nome-produto">Bolo de mulango</div>
+        <div class="descricao-produto">hmmmm hmmmm</div>
+
+        <div class="price-box">
+              <div class="preco-produto">R$ 32,00</div>
+              <ion-icon name="checkmark-circle" class="checkmark "></ion-icon>
+        </div>
+
+      </div>
+
+      <div onclick = "selecionarSobremesa(this)" class="produto ">
+        <div><img src="delicia.png"></div>
+        <div class="nome-produto">Delicia gelada</div>
+        <div class="descricao-produto">Para refrescar e matar a sede</div>
+        <div class="price-box">
+        <div class="preco-produto">R$ 5,90</div>
+        <ion-icon name="checkmark-circle" class="checkmark  "></ion-icon>
+      </div>
+      </div>
+      <div onclick = "selecionarSobremesa(this)" class="produto ">
+        <div><img src="torta.png"></div>
+        <div class="nome-produto">Torta de Apricó</div>
+        <div class="descricao-produto">Excelente para a pele</div>
+        <div class="price-box">
+        <div class="preco-produto">R$ 22,00</div>
+        <ion-icon name="checkmark-circle" class="checkmark  "></ion-icon>
+      </div>
+      </div>
+    </div>
+    <div class="barra-inferior">
+      
+      <div class="caixa-inferior">Selecione os 3 itens <br>para fechar o pedido</br></div>
+      <div onclick="fazerPedido()"class="caixa-inferior-funcional escondido">Fechar pedido</div>
+      
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+
   </body>
+  
 </html>
